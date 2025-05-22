@@ -22,9 +22,9 @@ address = "38:E1:3D:9F:2D:15"
 #doesn't automatically disconnect after the block ends!
 async def find_device(mac_address):
         print(f"scanning for {mac_address}...")
-            devices = await BleakScanner.discover(timeout=10.0)
-                for d in devices:
-                    print(d)
+        devices = await BleakScanner.discover(timeout=10.0)
+        for d in devices:
+            print(d)
 
 
 asyncio.run(find_device(address))
